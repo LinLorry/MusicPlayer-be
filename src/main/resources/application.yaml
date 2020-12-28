@@ -1,0 +1,12 @@
+spring:
+    profiles:
+        active: ${envirenment}
+    jackson:
+        serialization:
+            write-dates-as-timestamps: true
+server:
+    servlet:
+        encoding:
+            charset: UTF-8
+            enabled: true
+            force: true
