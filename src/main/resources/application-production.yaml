@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    driver-class-name: ${DRIVER_CLASS_NAME}
+    url: ${DATABASE_URL}
+    username: ${DATABASE_USER}
+    password: ${DATABASE_PWD}
+    schema: classpath:schema.sql
+    initialization-mode: ${SCHEMA_INIT_MODE:always}
+  devtools:
+    add-properties: false
+logging:
+  level:
+    web: info
