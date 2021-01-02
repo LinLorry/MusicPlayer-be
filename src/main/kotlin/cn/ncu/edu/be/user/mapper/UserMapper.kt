@@ -27,6 +27,12 @@ interface UserMapper {
     @Insert("INSERT INTO user " +
             "(username, password) " +
             "VALUES " +
+            "(#{username}, #{password})")
+    fun addUserByUsernameAndPassword(username: String, password: String): Int
+
+    @Insert("INSERT INTO user " +
+            "(username, password) " +
+            "VALUES " +
             "(#{user.username}, #{user.password})")
     @Options(keyProperty = "user.id", useGeneratedKeys = true, keyColumn = "id")
     fun addUserByMap(@Param("user") user: Map<String, Any>): Int
