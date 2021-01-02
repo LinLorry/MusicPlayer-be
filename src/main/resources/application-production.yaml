@@ -11,3 +11,6 @@ spring:
 logging:
   level:
     web: info
+secret:
+  salt: ${PWD_SALT}
+  authenticationName: ${AUTHENTICATION_NAME}
